@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import HelloButton from '../components/HelloButton';
 
-export const prerender = false;
+export const prerender = true;
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>This page is <span class="text-gradient">not prerendered</span></h1>
+		<h1>This page is <span class="text-gradient">prerendered</span></h1>
     <HelloButton client:load />
-    <div><a href="/prerendered">Prerendered page</a></div>
+    <div><a href="/">Non-prerendered page</a></div>
 	</main>
 </Layout>
 
